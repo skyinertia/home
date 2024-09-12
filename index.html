@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sp0-oky's Website</title>
+    
+    <!-- Add Favicon -->
+    <link rel="icon" href="https://i.ibb.co.com/47zBg8k/favicon-32x32.png" type="image/x-icon">
+    
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             margin: 0;
@@ -207,38 +212,8 @@
                     }
                 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": false,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": false,
-                        "mode": "push"
-                    },
-                    "resize": true
-                }
-            },
             "retina_detect": true
         });
-
-        // Add the 'loaded' class to trigger the fade-in effect
-        window.onload = function() {
-            document.querySelector('h1').style.opacity = '1';
-            document.querySelector('h2').style.opacity = '1';
-            document.querySelector('.spinner').style.display = 'none'; // Hide spinner once loaded
-            
-            // Fade in buttons one by one
-            const buttons = document.querySelectorAll('.button');
-            buttons.forEach((button, index) => {
-                setTimeout(() => {
-                    button.style.opacity = '1';
-                }, index * 150); // Delay each button by 150ms
-            });
-        };
     </script>
-
 </body>
 </html>
