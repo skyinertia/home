@@ -11,6 +11,7 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
@@ -18,18 +19,19 @@
             animation: gradientBG 10s ease infinite;
             font-family: 'Orbitron', sans-serif;
             overflow: hidden;
+            text-align: center;
         }
         h1 {
             color: white;
             font-size: 4em;
-            text-shadow: 0 0 5px #ff0000, 
-                         0 0 10px #ff0000, 
-                         0 0 15px #ff0000;
+            text-shadow: 
+                0 0 5px #ff0000, 
+                0 0 10px #ff0000, 
+                0 0 15px #ff0000;
             opacity: 0;
             transition: opacity 2s ease;
             animation: rainbowGlow 5s linear infinite;
         }
-        /* Rainbow glow effect */
         @keyframes rainbowGlow {
             0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
             16% { text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00; }
@@ -39,20 +41,45 @@
             80% { text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff; }
             100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
         }
-        /* Fade-in effect */
-        h1.loaded {
-            opacity: 1;
-        }
         @keyframes gradientBG {
             0% { background-position: 0% 0%; }
             50% { background-position: 100% 100%; }
             100% { background-position: 0% 0%; }
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #333;
+            border: 2px solid #00ff99;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #00ff99;
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
 
     <h1>Hello, World!</h1>
+
+    <div class="button-container">
+        <a href="https://www.youtube.com/@spooky024" class="button" target="_blank">YouTube</a>
+        <a href="https://scratch.mit.edu/users/skyinertia/" class="button" target="_blank">Scratch</a>
+        <a href="https://www.pinterest.com/Sp0_oky" class="button" target="_blank">Pinterest</a>
+        <a href="https://open.spotify.com/user/31bljlsnvgexgvtoabpblsi25q4i" class="button" target="_blank">Spotify</a>
+        <a href="https://x.com/skyinertia" class="button" target="_blank">X</a>
+        <a href="https://discord.com/users/1213802387295182848" class="button" target="_blank">Discord</a>
+        <a href="https://www.roblox.com/users/3225496266/" class="button" target="_blank">Roblox</a>
+    </div>
 
     <script>
         // Add the 'loaded' class to trigger the fade-in effect
