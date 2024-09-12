@@ -41,13 +41,15 @@
         }
         h2 {
             color: white;
-            font-size: 1em;
+            font-size: 2em; /* Adjusted font-size to match subtitle */
             text-shadow: 0 0 10px #ff0000;
             margin-top: -10px;
             opacity: 0;
             transition: opacity 2s ease;
-            animation: rainbowGlow 5s linear infinite, float 2.5s ease-in-out infinite;
+            animation: rainbowGlow 5s linear infinite, float 3s ease-in-out infinite;
+            animation-delay: 0.2s; /* Delay the start of the floating animation */
         }
+
         @keyframes rainbowGlow {
             0% { text-shadow: 0 0 15px #ff0000; }
             16% { text-shadow: 0 0 15px #ff7f00; }
