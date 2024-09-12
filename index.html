@@ -6,6 +6,8 @@
     <title>Hello, World!</title>
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Include particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -110,8 +112,10 @@
 <body>
 
     <div class="loading-screen" id="loading-screen">Loading...</div>
-    
-    <h1>Hello, World!</h1>
+
+    <div class="particle-container"></div>
+
+    <h1 id="hello-world">Hello, World!</h1>
 
     <div class="button-container">
         <a href="https://www.youtube.com/@spooky024" class="button" target="_blank">YouTube</a>
@@ -123,8 +127,6 @@
         <a href="https://www.roblox.com/users/3225496266/profile" class="button" target="_blank">Roblox</a>
     </div>
 
-    <div class="particle-container"></div>
-    
     <div class="version">Version: 1.0</div>
 
     <script>
@@ -148,8 +150,5 @@
             document.getElementById('loading-screen').classList.add('hidden');
         };
     </script>
-
-    <!-- Include particles.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </body>
 </html>
