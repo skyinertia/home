@@ -86,10 +86,11 @@
             border: 2px solid;
             border-radius: 5px;
             text-decoration: none;
-            opacity: 0;
-            transition: background-color 0.3s, transform 0.3s, border-color 0.3s, opacity 2s ease;
+            transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
             animation: rainbowBorder 5s linear infinite;
             text-align: center; /* Center text inside the buttons */
+            opacity: 0; /* Start with buttons hidden */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
         }
 
         .button:hover {
@@ -227,6 +228,14 @@
             document.querySelector('h1').style.opacity = '1';
             document.querySelector('h2').style.opacity = '1';
             document.querySelector('.spinner').style.display = 'none'; // Hide spinner once loaded
+            
+            // Fade in buttons one by one
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach((button, index) => {
+                setTimeout(() => {
+                    button.style.opacity = '1';
+                }, index * 150); // Delay each button by 150ms
+            });
         };
     </script>
 
