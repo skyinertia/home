@@ -196,62 +196,90 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-    particlesJS('particles-js', {
-        "particles": {
-            "number": {
-                "value": 0,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#ffffff"
-            },
-            "shape": {
-                "type": "line",  // Make particles look like lines (stars)
-                "stroke": {
-                    "width": 2,
-                    "color": "#ffffff"  // White shooting stars
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 0.5,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 3,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 5,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "move": {
+        // Initialize particles.js
+particlesJS('particles-js', {
+    "particles": {
+        "number": {
+            "value": 250,
+            "density": {
                 "enable": true,
-                "speed": 20,  // Faster speed to simulate shooting stars
-                "direction": "right",  // Set a direction for shooting stars
-                "random": true,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
+                "value_area": 1200
             }
         },
-        "retina_detect": true
-    });
+        "color": {
+            "value": ["#ff0055", "#00ffae", "#ffdd00", "#5f00ff"] // Vibrant colors
+        },
+        "shape": {
+            "type": "star", // Cool shape like stars
+            "stroke": {
+                "width": 0,
+                "color": "#ffffff"
+            },
+            "polygon": {
+                "nb_sides": 6
+            }
+        },
+        "opacity": {
+            "value": 0.8, // More visible particles
+            "random": true, // Random opacity for variety
+            "anim": {
+                "enable": true,
+                "speed": 1.5, // Smooth opacity transition
+                "opacity_min": 0.3,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 4, // Larger particles
+            "random": true,
+            "anim": {
+                "enable": true, // Smooth size animation
+                "speed": 10,
+                "size_min": 0.5,
+                "sync": false
+            }
+        },
+        "move": {
+            "enable": true,
+            "speed": 6, // Faster particles
+            "direction": "none", // Free movement in any direction
+            "random": true, // Randomized movement
+            "straight": false,
+            "out_mode": "bounce", // Bounce back within the screen
+            "bounce": true,
+            "attract": {
+                "enable": true, // Particles attract each other
+                "rotateX": 3000,
+                "rotateY": 3000
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse" // Repel particles on hover
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push" // Add particles on click
+            },
+            "resize": true
+        },
+        "modes": {
+            "repulse": {
+                "distance": 100,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            }
+        }
+    },
+    "retina_detect": true
+});
+
 
        // Add the 'loaded' class to trigger the fade-in effect
         window.onload = function() {
