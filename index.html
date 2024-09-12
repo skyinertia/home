@@ -196,44 +196,41 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        // Initialize particles.js
+// Initialize particles.js
 particlesJS('particles-js', {
     "particles": {
         "number": {
-            "value": 250,
+            "value": 200,
             "density": {
                 "enable": true,
                 "value_area": 1200
             }
         },
         "color": {
-            "value": ["#ff0055", "#00ffae", "#ffdd00", "#5f00ff"] // Vibrant colors
+            "value": ["#ff0055", "#00ffae", "#ffdd00", "#5f00ff"] // Bright colors for variety
         },
         "shape": {
-            "type": "star", // Cool shape like stars
+            "type": "circle", // Simple circle particles
             "stroke": {
                 "width": 0,
                 "color": "#ffffff"
-            },
-            "polygon": {
-                "nb_sides": 24
             }
         },
         "opacity": {
-            "value": 0.8, // More visible particles
-            "random": true, // Random opacity for variety
+            "value": 0.8,
+            "random": true, // Add random opacity for visual interest
             "anim": {
                 "enable": true,
-                "speed": 1.5, // Smooth opacity transition
-                "opacity_min": 0.3,
+                "speed": 1.5,
+                "opacity_min": 0.2,
                 "sync": false
             }
         },
         "size": {
-            "value": 4, // Larger particles
+            "value": 4,
             "random": true,
             "anim": {
-                "enable": true, // Smooth size animation
+                "enable": true,
                 "speed": 10,
                 "size_min": 0.5,
                 "sync": false
@@ -241,17 +238,12 @@ particlesJS('particles-js', {
         },
         "move": {
             "enable": true,
-            "speed": 6, // Faster particles
-            "direction": "none", // Free movement in any direction
-            "random": true, // Randomized movement
+            "speed": 4, // Moderate speed for smoother movement
+            "direction": "none", // Random movement
+            "random": true,
             "straight": false,
-            "out_mode": "bounce", // Bounce back within the screen
-            "bounce": true,
-            "attract": {
-                "enable": true, // Particles attract each other
-                "rotateX": 3000,
-                "rotateY": 3000
-            }
+            "out_mode": "out", // Particles leave the screen
+            "bounce": false
         }
     },
     "interactivity": {
@@ -263,7 +255,7 @@ particlesJS('particles-js', {
             },
             "onclick": {
                 "enable": true,
-                "mode": "push" // Add particles on click
+                "mode": "push" // Push new particles on click
             },
             "resize": true
         },
@@ -279,6 +271,7 @@ particlesJS('particles-js', {
     },
     "retina_detect": true
 });
+
 
 
        // Add the 'loaded' class to trigger the fade-in effect
