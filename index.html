@@ -20,14 +20,24 @@
             overflow: hidden;
         }
         h1 {
-            color: #00ff99;
+            color: white;
             font-size: 4em;
-            text-shadow: 0 0 10px rgba(0, 255, 150, 0.7),
-                        0 0 20px rgba(0, 255, 150, 0.6),
-                        0 0 30px rgba(0, 255, 150, 0.5),
-                        0 0 40px rgba(0, 255, 150, 0.4);
+            text-shadow: 0 0 5px #ff0000, 
+                         0 0 10px #ff0000, 
+                         0 0 15px #ff0000;
             opacity: 0;
             transition: opacity 2s ease;
+            animation: rainbowGlow 5s linear infinite;
+        }
+        /* Rainbow glow effect */
+        @keyframes rainbowGlow {
+            0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
+            16% { text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00; }
+            32% { text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00; }
+            48% { text-shadow: 0 0 5px #7fff00, 0 0 10px #7fff00, 0 0 15px #7fff00; }
+            64% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; }
+            80% { text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff; }
+            100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
         }
         /* Fade-in effect */
         h1.loaded {
