@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sp0-oky's Links</title>
+    <title>Hello, World!</title>
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -20,6 +20,17 @@
             font-family: 'Orbitron', sans-serif;
             overflow: hidden;
             text-align: center;
+            position: relative;
+        }
+        .background-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: -1;
         }
         h1 {
             color: white;
@@ -27,7 +38,7 @@
             text-shadow: 0 0 15px #ff0000;
             opacity: 0;
             transition: opacity 2s ease;
-            animation: rainbowGlow 5s linear infinite;
+            animation: rainbowGlow 5s linear infinite, float 3s ease-in-out infinite;
         }
         @keyframes rainbowGlow {
             0% { text-shadow: 0 0 15px #ff0000; }
@@ -37,6 +48,11 @@
             64% { text-shadow: 0 0 15px #00ffff; }
             80% { text-shadow: 0 0 15px #0000ff; }
             100% { text-shadow: 0 0 15px #ff00ff; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
         @keyframes gradientBG {
             0% { background-position: 0% 0%; }
@@ -52,7 +68,7 @@
             margin: 10px;
             font-size: 1.2em;
             color: white;
-            background-color: #333;
+            background: linear-gradient(135deg, #333, #666);
             border: 2px solid;
             border-radius: 5px;
             text-decoration: none;
@@ -60,7 +76,7 @@
             animation: rainbowBorder 5s linear infinite;
         }
         .button:hover {
-            background-color: #00ff99;
+            background: linear-gradient(135deg, #00ff99, #00cc99);
             transform: scale(1.1);
         }
         @keyframes rainbowBorder {
@@ -72,10 +88,24 @@
             80% { border-color: #0000ff; }
             100% { border-color: #ff00ff; }
         }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #00ff99;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
 
+    <div class="spinner"></div>
     <h1>Hello, World!</h1>
 
     <div class="button-container">
@@ -88,10 +118,13 @@
         <a href="https://www.roblox.com/users/3225496266/profile" class="button" target="_blank">Roblox</a>
     </div>
 
+    <div class="background-particles"></div>
+
     <script>
         // Add the 'loaded' class to trigger the fade-in effect
         window.onload = function() {
             document.querySelector('h1').style.opacity = '1';
+            document.querySelector('.spinner').style.display = 'none'; // Hide spinner once loaded
         };
     </script>
 
