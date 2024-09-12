@@ -57,7 +57,17 @@
             animation: rainbowGlow 5s linear infinite, float 3s ease-in-out infinite;
             animation-delay: 0.2s; /* Delay the start of the floating animation */
         }
-
+        h3 {
+            color: white;
+            font-size: 1.4em; /* Adjust the size as needed */
+            text-shadow: 0 0 10px #ff0000;
+            margin-top: -10px;
+            opacity: 0;
+            transition: opacity 2s ease;
+            animation: rainbowGlow 5s linear infinite, float 3s ease-in-out infinite;
+            animation-delay: 0.4s; /* Delay the start of the floating animation */
+        }
+        
         @keyframes rainbowGlow {
             0% { text-shadow: 0 0 15px #ff0000; }
             16% { text-shadow: 0 0 15px #ff7f00; }
@@ -136,6 +146,7 @@
     <div class="spinner"></div>
     <h1>Hello, World!</h1>
     <h2>Welcome to my website!</h2>
+    <h3>Where you can find me:</h3>
 
     <div class="button-container">
         <a href="https://www.youtube.com/@spooky024" class="button" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
