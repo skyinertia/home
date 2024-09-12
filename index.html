@@ -239,23 +239,23 @@
                         "sync": false
                     }
                 },
-                "move": {
-                    "enable": true,
-                    "speed": 3,
-                    "direction": "up",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
+            "move": {
+                "enable": true,
+                "speed": 10,  // Faster speed to simulate shooting stars
+                "direction": "up",  // Set a direction for shooting stars
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
                 }
-            },
-            "retina_detect": true
-        });
+            }
+        },
+        "retina_detect": true
+    });
 
        // Add the 'loaded' class to trigger the fade-in effect
         window.onload = function() {
