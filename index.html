@@ -204,10 +204,11 @@
         });
 
         // Hide spinner and show content once everything is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('h1').classList.remove('hidden');
-            document.querySelector('.spinner').classList.add('hidden');
-        });
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM fully loaded and parsed');
+        document.querySelector('h1').classList.remove('hidden');
+        document.querySelector('.spinner').classList.add('hidden');
+    });
     </script>
 
 </body>
