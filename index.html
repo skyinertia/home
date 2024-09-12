@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, World!</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #282c34;
+            font-family: 'Orbitron', sans-serif;
+        }
+        h1 {
+            color: white;
+            font-size: 4em;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+        /* Fade-in effect */
+        h1.loaded {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
+
     <h1>Hello, World!</h1>
+
+    <script>
+        // Add the 'loaded' class to trigger the fade-in effect
+        window.onload = function() {
+            document.querySelector('h1').classList.add('loaded');
+        };
+    </script>
+
 </body>
 </html>
