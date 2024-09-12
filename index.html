@@ -24,22 +24,19 @@
         h1 {
             color: white;
             font-size: 4em;
-            text-shadow: 
-                0 0 5px #ff0000, 
-                0 0 10px #ff0000, 
-                0 0 15px #ff0000;
+            text-shadow: 0 0 15px #ff0000;
             opacity: 0;
             transition: opacity 2s ease;
             animation: rainbowGlow 5s linear infinite;
         }
         @keyframes rainbowGlow {
-            0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000; }
-            16% { text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00; }
-            32% { text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00; }
-            48% { text-shadow: 0 0 5px #7fff00, 0 0 10px #7fff00, 0 0 15px #7fff00; }
-            64% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; }
-            80% { text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff; }
-            100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+            0% { text-shadow: 0 0 15px #ff0000; }
+            16% { text-shadow: 0 0 15px #ff7f00; }
+            32% { text-shadow: 0 0 15px #ffff00; }
+            48% { text-shadow: 0 0 15px #7fff00; }
+            64% { text-shadow: 0 0 15px #00ffff; }
+            80% { text-shadow: 0 0 15px #0000ff; }
+            100% { text-shadow: 0 0 15px #ff00ff; }
         }
         @keyframes gradientBG {
             0% { background-position: 0% 0%; }
@@ -56,14 +53,24 @@
             font-size: 1.2em;
             color: white;
             background-color: #333;
-            border: 2px solid #00ff99;
+            border: 2px solid;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+            animation: rainbowBorder 5s linear infinite;
         }
         .button:hover {
             background-color: #00ff99;
             transform: scale(1.1);
+        }
+        @keyframes rainbowBorder {
+            0% { border-color: #ff0000; }
+            16% { border-color: #ff7f00; }
+            32% { border-color: #ffff00; }
+            48% { border-color: #7fff00; }
+            64% { border-color: #00ffff; }
+            80% { border-color: #0000ff; }
+            100% { border-color: #ff00ff; }
         }
     </style>
 </head>
