@@ -13,18 +13,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #282c34;
+            background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
             font-family: 'Orbitron', sans-serif;
+            overflow: hidden;
         }
         h1 {
-            color: white;
+            color: #00ff99;
             font-size: 4em;
+            text-shadow: 0 0 10px rgba(0, 255, 150, 0.7),
+                        0 0 20px rgba(0, 255, 150, 0.6),
+                        0 0 30px rgba(0, 255, 150, 0.5),
+                        0 0 40px rgba(0, 255, 150, 0.4);
             opacity: 0;
             transition: opacity 2s ease;
         }
         /* Fade-in effect */
         h1.loaded {
             opacity: 1;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
         }
     </style>
 </head>
