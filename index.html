@@ -41,10 +41,12 @@
         }
         h2 {
             color: white;
-            font-size: 2em;
+            font-size: 1em;
+            text-shadow: 0 0 10px #ff0000;
             margin-top: -10px;
             opacity: 0;
-            animation: rainbowGlow 5s linear infinite, float 3s ease-in-out infinite;
+            transition: opacity 2s ease;
+            animation: rainbowGlow 5s linear infinite, float 2.5s ease-in-out infinite;
         }
         @keyframes rainbowGlow {
             0% { text-shadow: 0 0 15px #ff0000; }
