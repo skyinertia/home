@@ -197,7 +197,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-    // Initialize particles.js with shooting star effect
     particlesJS('particles-js', {
         "particles": {
             "number": {
@@ -211,24 +210,24 @@
                 "value": "#ffffff"
             },
             "shape": {
-                "type": "star",
+                "type": "line",  // Make particles look like lines (stars)
                 "stroke": {
-                    "width": 0,
-                    "color": "#ffffff"
+                    "width": 2,
+                    "color": "#ffffff"  // White shooting stars
                 }
             },
             "opacity": {
-                "value": 0.7,
+                "value": 0.5,
                 "random": true,
                 "anim": {
                     "enable": true,
-                    "speed": 1,
+                    "speed": 0.5,
                     "opacity_min": 0.1,
                     "sync": false
                 }
             },
             "size": {
-                "value": 2,
+                "value": 3,
                 "random": true,
                 "anim": {
                     "enable": true,
@@ -239,8 +238,8 @@
             },
             "move": {
                 "enable": true,
-                "speed": 6,
-                "direction": "right",
+                "speed": 20,  // Faster speed to simulate shooting stars
+                "direction": "right",  // Set a direction for shooting stars
                 "random": true,
                 "straight": false,
                 "out_mode": "out",
