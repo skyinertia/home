@@ -112,29 +112,30 @@
             flex-wrap: wrap; /* Allow buttons to wrap to the next line */
             justify-content: center; /* Center the buttons horizontally */
         }
-        .button {
-            display: block; /* Make buttons take up the full width of their container */
-            width: 200px; /* Set a fixed width for buttons, adjust as needed */
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 1.2em;
-            color: white;
-            background: linear-gradient(135deg, #333, #3A76D2);
-            border: 2px solid;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
-            animation: rainbowBorder 5s linear infinite;
-            text-align: center; /* Center text inside the buttons */
-            opacity: 0; /* Start with buttons hidden */
-            transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
-        }
+.button {
+    display: block; /* Make buttons take up the full width of their container */
+    width: 200px; /* Set a fixed width for buttons, adjust as needed */
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+    color: white;
+    background: linear-gradient(135deg, #333, #3A76D2);
+    border: 2px solid transparent; /* Set border to transparent initially */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center; /* Center text inside the buttons */
+    opacity: 0; /* Start with buttons hidden */
+    transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+    animation: rainbowBorder 5s linear infinite, neonBorderGlow 2s ease-in-out infinite;
+}
 
-        .button:hover {
-            background: linear-gradient(135deg, #00aaff, #00cfff); /* Cerulean blue gradient */
-            transform: scale(1.1);
-            transition: background 0.3s, transform 0.3s; /* Smooth transition for background and scaling */
-        }
+/* Add neon glow effect on hover */
+.button:hover {
+    background: linear-gradient(135deg, #00aaff, #00cfff); /* Cerulean blue gradient */
+    transform: scale(1.1);
+    border-color: #00cfff; /* Change border color on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for background and scaling */
+}
         @keyframes rainbowBorder {
             0% { border-color: #ff0000; }
             16% { border-color: #ff7f00; }
